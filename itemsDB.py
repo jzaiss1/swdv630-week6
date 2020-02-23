@@ -11,12 +11,14 @@ from sqlalchemy.orm import sessionmaker
 # ORM capable Class created from the Base class
 Base = declarative_base()
 
-class Item:
+class Item(Base):
   def __init__(self, name, price):
     self.name = name
     self.price = price
     self.quantity = 1
     # TODO: Increment the quantity
+
+    __tablename__ = 'inventory'
   
   def __str__(self):
         return "{}: $ {}".format(self.name, self.price)
