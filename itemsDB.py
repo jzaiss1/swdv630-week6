@@ -65,7 +65,7 @@ def main():
   session = Session()
 
   session.add_all([
-    Item{'2016-05-03 00:00:00','12oz Drinking Jar w Lid & Straw',1,2},
+    Item{date='2016-05-03 00:00:00',name='12oz Drinking Jar w Lid & Straw',quantity=1,price=2},
     Item{'2017-05-09 00:00:00','1950''s Sip n Snack Illistrated Napkins',1,8},
     Item{'2017-07-20 00:00:00','1980 Cardinals Media Guide',1,3.75},
     Item{'2017-07-08 00:00:00','1987 Cardinals T-Shirt',1,4},
