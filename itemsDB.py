@@ -43,5 +43,6 @@ class Sale:
 
 def main():
   print(sqlalchemy.__version__)
+  engine = create_engine('sqlite:///:memory:', echo=True)
 
 main()
