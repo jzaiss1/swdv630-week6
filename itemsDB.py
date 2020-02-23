@@ -4,6 +4,12 @@
 
 import sqlalchemy
 from sqlalchemy import create_engine
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy import Column, Integer, String
+from sqlalchemy.orm import sessonmaker
+
+# ORM capable Class created from the Base class
+Base = declarative_base()
 
 class Item:
   def __init__(self, name, price):
