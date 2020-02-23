@@ -3,6 +3,7 @@
 # Week 6 Assignment - Storing Objects in the Database
 
 import sqlalchemy
+from sqlalchemy import create_engine
 
 class Item:
   def __init__(self, name, price):
