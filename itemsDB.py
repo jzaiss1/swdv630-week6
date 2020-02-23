@@ -19,6 +19,11 @@ class Item(Base):
     # TODO: Increment the quantity
 
     __tablename__ = 'inventory'
+
+    id = column(Integer, primary_key=True)
+    name = column(String)
+    price = column(Integer)
+    quantity = column(Integer)
   
   def __str__(self):
         return "{}: $ {}".format(self.name, self.price)
@@ -56,5 +61,7 @@ def main():
 
   Base.metadata.create_all(engine)
 
+  Session = sessionmaker(bind-engine)
+  session = Session()
 
 main()
