@@ -18,12 +18,12 @@ class Item(Base):
     self.quantity = 1
     # TODO: Increment the quantity
 
-    __tablename__ = 'inventory'
+  __tablename__ = 'inventory'
 
-    id = column(Integer, primary_key=True)
-    name = column(String)
-    price = column(Integer)
-    quantity = column(Integer)
+  id = column(Integer, primary_key=True)
+  name = column(String)
+  price = column(Integer)
+  quantity = column(Integer)
   
   def __str__(self):
         return "{}: $ {}".format(self.name, self.price)
