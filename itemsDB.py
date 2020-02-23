@@ -52,4 +52,7 @@ def main():
   print(sqlalchemy.__version__)
   engine = create_engine('sqlite:///:memory:', echo=True)
 
+  Base.metadata.create_all(engine)
+
+
 main()
