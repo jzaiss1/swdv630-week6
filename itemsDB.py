@@ -42,6 +42,6 @@ class Sale:
 
 
 def main():
-  sqlalchemy.__version__ 
+  print(sqlalchemy.__version__)
 
 main()
