@@ -20,10 +20,10 @@ class Item(Base):
 
   __tablename__ = 'inventory'
 
-  id = column(Integer, primary_key=True)
-  name = column(String)
-  price = column(Integer)
-  quantity = column(Integer)
+  id = Column(Integer, primary_key=True)
+  name = Column(String)
+  price = Column(Integer)
+  quantity = Column(Integer)
   
   def __str__(self):
         return "{}: $ {}".format(self.name, self.price)
