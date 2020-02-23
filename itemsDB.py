@@ -5,7 +5,7 @@
 import sqlalchemy
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import Column, Integer, String, Decimal
+from sqlalchemy import Column, Integer, String, Float
 from sqlalchemy.orm import sessionmaker
 
 # ORM capable Class created from the Base class
@@ -22,7 +22,7 @@ class Item(Base):
 
   id = Column(Integer, primary_key=True)
   name = Column(String)
-  price = Column(Decimal)
+  price = Column(Float)
   quantity = Column(Integer)
   
   def __str__(self):
