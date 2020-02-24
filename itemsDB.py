@@ -206,4 +206,7 @@ def main():
     Item('2017-03-28 00:00:00','iPhone 5s Case',1,1.25)])
   session.commit()
 
+  for row in session.query(Item).all():
+    print(row.id, row.name)
+
 main()
