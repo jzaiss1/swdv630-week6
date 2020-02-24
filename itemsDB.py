@@ -207,6 +207,6 @@ def main():
   session.commit()
 
   for row in session.query(Item).all():
-    print('{3:}, {}'.format(row.id, row.name))
+      print('{:3} {}'.format(row.id, row.name))
 
 main()
