@@ -56,7 +56,7 @@ class Sale:
 
 def main():
   print(sqlalchemy.__version__)
-  engine = create_engine('sqlite:///:memory:', echo=True)
+  engine = create_engine('sqlite:///:memory:', echo=False)
 
   Base.metadata.create_all(engine)
 
