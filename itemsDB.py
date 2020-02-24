@@ -55,7 +55,7 @@ class Sale:
     return OrderIterator(self.items)
 
 def main():
-  print(sqlalchemy.__version__)
+  print('Using SQLAlchemy version {}'.format(sqlalchemy.__version__))
   engine = create_engine('sqlite:///:memory:', echo=False)
 
   Base.metadata.create_all(engine)
