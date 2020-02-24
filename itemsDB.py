@@ -55,7 +55,7 @@ class Sale:
     return OrderIterator(self.items)
 
 def main():
-  print('Using SQLAlchemy version {}'.format(sqlalchemy.__version__))
+  print('\nUsing SQLAlchemy version {}\n'.format(sqlalchemy.__version__))
   engine = create_engine('sqlite:///:memory:', echo=False)
 
   Base.metadata.create_all(engine)
@@ -207,6 +207,6 @@ def main():
   session.commit()
 
   for row in session.query(Item).all():
-    print(row.id, row.name)
+    print('{3:}, {}'.format(row.id, row.name))
 
 main()
